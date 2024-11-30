@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Reducir el espacio entre los cuadros */
+    max-width: 100%;  /* Ajustar el contenedor al 100% del ancho */
+    padding: 20px;
+    overflow-x: auto;  /* Permite el desplazamiento horizontal si los elementos exceden el ancho */
+}
+
+.plan {
+    background-color: white; /* 1. Establece el color de fondo del cuadro como blanco */
+    border: 1px solid #ddd; /* 2. Define un borde de 1 píxel de grosor, color gris claro (#ddd) alrededor del cuadro */
+    border-radius: 8px; /* 3. Aplica un radio de 8 píxeles a las esquinas del borde, redondeándolas */
+    padding: 20px; /* 4. Añade un relleno (espacio interior) de 20 píxeles en todos los lados dentro del cuadro */
+    width: 22%; /* 5. Establece el ancho del cuadro como un 22% del contenedor padre (esto permite que varios cuadros estén en fila) */
+    height: 550px; /* 6. Establece una altura fija de 550 píxeles para cada cuadro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 7. Aplica una sombra sutil (2 píxeles de desplazamiento vertical y 4 píxeles de difuminado) con un color negro semitransparente (0.1) */
+    display: flex; /* 8. Usa un modelo de layout Flexbox, permitiendo un control más fácil sobre el diseño de los elementos hijos */
+    flex-direction: column; /* 9. Organiza los elementos hijos del cuadro en una columna (de arriba hacia abajo) */
+    justify-content: space-between; /* 10. Distribuye el espacio entre los elementos hijos, de manera que estén espaciados uniformemente de arriba a abajo */
+}
+
+.plan h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.plan p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.plan ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.plan .price {
+    font-weight: bold; /* Establece el texto en negrita para los elementos que coincidan con el selector */
+    font-size: 29px;   /* Cambia el tamaño de la fuente a 20 píxeles */
+    margin-bottom: 20px; /* Añade un margen de 20 píxeles debajo de los elementos */
+}
+
+
+.btn {
+    display: block;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Estilos para dispositivos móviles */
+
+@media (max-width: 768px) {
+    /* Ajuste para que los elementos no queden tapados por la barra */
+    body {
+        padding-top: 100px; /* Agrega espacio en la parte superior para la barra */
+    }
+
+    .container {
+        flex-direction: column; /* Organiza los planes en columna */
+        align-items: center;
+        padding: 10px; /* Agrega algo de espacio dentro del contenedor */
+    }
+
+    .plan {
+        width: 90%; /* Que ocupen casi todo el ancho del teléfono */
+        height: auto; /* Ajusta la altura automáticamente */
+        margin-bottom: 20px; /* Espaciado entre los planes */
+    }
+
+    .plan h3 {
+        font-size: 18px; /* Ajusta el tamaño del título */
+        text-align: center; /* Centra el texto del título */
+    }
+
+    .plan p {
+        font-size: 14px; /* Ajusta el tamaño del texto */
+        text-align: justify; /* Ajusta el texto para que se vea más ordenado */
+        margin-bottom: 20px; /* Añade espacio entre el texto y los botones */
+    }
+
+    .plan .price {
+        font-size: 16px; /* Ajusta el tamaño del precio */
+        text-align: center; /* Centra el precio */
+    }
+
+    .btn {
+        padding: 12px 20px; /* Ajusta el tamaño del botón */
+        font-size: 14px; /* Ajusta el tamaño del texto del botón */
+        text-align: center; /* Centra el texto del botón */
+        display: block;
+        margin: 10px auto; /* Agrega margen para centrar el botón */
+    }
+
+    #info-btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px; /* Mueve el botón de más información hacia abajo */
+    }
+
+    #info-btn .btn-secondary {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 25px;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 16px; /* Ajusta el tamaño del texto */
+        text-align: center;
+    }
+
+    #info-btn .btn-secondary:hover {
+        background-color: #0056b3;
+    }
+
+    /* Agregamos la regla para ocultar el botón en dispositivos móviles */
+    #info-btn {
+        display: none; /* Oculta el botón en pantallas pequeñas */
+    }
+}
+
+
+/*   aca hay una extencion para corregir el bug de las pantallas pequeñas 
+
+
+
+ este  codigo de aca es el que se encarga de corregir el error de resolucion 
+*/
+
+/* Ajustes específicos para pantallas de notebooks */
+@media (max-width: 1366px) {
+    .container {
+        gap: 5px; /* Reduce el espacio entre las tarjetas */
+        padding: 10px; /* Disminuye el padding del contenedor */
+    }
+
+    .plan {
+        width: 25%; /* Ajusta el ancho de las tarjetas para que quepan mejor */
+        height: auto; /* Permite que se ajusten en altura */
+    }
+
+    .plan p {
+        font-size: 14px; /* Reduce ligeramente el tamaño del texto */
+    }
+
+    .plan .price {
+        font-size: 18px; /* Ajusta el tamaño del precio para pantallas más pequeñas */
+    }
+
+    .btn {
+        font-size: 14px; /* Reduce el tamaño de los botones */
+        padding: 8px; /* Ajusta el padding del botón */
+    }
+}
+
+/* Ajustes para notebooks aún más pequeños */
+@media (max-width: 1024px) {
+    .plan {
+        width: 100%; /* Cada tarjeta ocupará todo el ancho */
+        margin-bottom: 20px; /* Añade espacio entre tarjetas en filas */
+    }
+
+    .container {
+        flex-direction: column; /* Acomoda las tarjetas en una sola columna */
+    }
+}
+
+/*
+
+hago la actualizacion de un boton de informacion extra para las empresas
+*/
+
+
+
+#info-btn {
+    position: absolute; /* Posiciona el div relativo al contenedor padre */
+    bottom: 10px; /* Lo coloca a 10px del borde inferior del contenedor padre */
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    text-align: center; /* Centra el botón horizontalmente */
+}
+
+#info-btn .btn-secondary {
+    display: inline-block; /* Botón se comporta correctamente */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #007bff; /* Color del botón */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Animación al pasar el mouse */
+}
+
+#info-btn .btn-secondary:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}

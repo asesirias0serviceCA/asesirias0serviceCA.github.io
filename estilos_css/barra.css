@@ -1,0 +1,73 @@
+
+/* ====== Estilos Generales ====== */
+body {
+    margin: 0; /* Elimina los márgenes predeterminados del navegador */
+    font-family: Arial, sans-serif; /* Establece la fuente de texto */
+}
+
+/* ====== Barra de Navegación ====== */
+.navbar {
+    background-color: #68afcf; /* Color de fondo */
+    color: white; /* Texto blanco */
+    padding: 30px 20px; /* Espaciado interno */
+    display: flex; /* Usa un modelo de caja flexible */
+    justify-content: center; /* Centra los elementos en el contenedor */
+    align-items: center; /* Alinea los elementos verticalmente */
+    position: fixed; /* Barra fija en la parte superior */
+    top: 0; /* Alinea a la parte superior */
+    left: 0; /* Alinea a la izquierda */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    z-index: 1000; /* Asegura que quede encima de otros elementos */
+}
+
+/* Logo */
+.logo {
+    height: 60px; /* Ajusta el tamaño del logo */
+    width: auto; /* Mantiene la proporción */
+    position: absolute;
+    left: 20px; /* Deja el logo fijo a la izquierda */
+}
+
+/* ====== Enlaces de Navegación ====== */
+.nav-links {
+    list-style: none; /* Elimina los puntos de lista */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el relleno */
+    display: flex; /* Muestra los enlaces en fila */
+    gap: 20px; /* Espaciado entre los enlaces */
+}
+
+.nav-links a {
+    color: white; /* Color de texto */
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: bold; /* Hace el texto de los enlaces más grueso */
+}
+
+.nav-links a:hover {
+    text-decoration: underline; /* Agrega subrayado al pasar el cursor */
+}
+
+/* ====== Contenido Principal ====== */
+main {
+    margin-top: 80px; /* Espacio superior para no quedar debajo de la barra */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ====== Sección Home y Servicios ====== */
+section {
+    margin-bottom: 40px; /* Espaciado entre las secciones */
+}
+
+h1 {
+    font-size: 2.5rem; /* Tamaño grande para los títulos */
+}
+
+p {
+    font-size: 1.2rem; /* Tamaño de fuente para los párrafos */
+}
+
+
+
+

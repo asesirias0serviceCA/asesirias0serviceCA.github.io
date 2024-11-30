@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="../estilos_css/barra.css">
+    <link rel="stylesheet" href="../estilos_css/encuest.css">
+    <script>
+
+                                                         //// esta pagina es dedicada a pyme
+
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("LA37ZvU9RmBo4ROi-"); // Inicializa con tu clave pública                                      
+        })();
+    </script>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <div class="navbar">
+            <img src="../img/sin_fondo.png" alt="Logo Service C&A" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                </ul>
+            </nav>
+    </div>
+    <form id="contactForm">
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Correo Electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Número de Teléfono:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="Escribe tu número de teléfono" required><br><br>
+
+        <label for="message">Mensaje:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+    <script src="../java/pyme.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* ====== Estilos Generales 
+
+
+este documento css es esclusivo de el index, este se encarga de dividir la pagina en 2 partes 
+
+====== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ====== Contenedor Principal ====== */
+.main-container {
+    display: flex; /* Usamos flexbox para alinear las secciones en una fila */
+    justify-content: space-between; /* Deja espacio entre el logo y el texto */
+    align-items: center; /* Alinea el contenido verticalmente */
+    padding: 20px;
+}
+
+/* Sección del logo */
+.right-section {
+    flex: 40%; /* El logo ocupa el 40% del espacio */
+    display: flex;
+    justify-content: center; /* Centra el logo horizontalmente */
+}
+
+/* Sección de texto */
+.left-section {
+    flex: 60%; /* El texto ocupa el 60% del espacio */
+}
+
+/* Logo */
+.logo2 {
+    max-width: 100%; /* Asegura que el logo se ajuste al tamaño de su contenedor */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+
+/* ====== Media Queries (Responsivo) ====== */
+@media (max-width: 768px) {
+    /* Cambiar el diseño para pantallas pequeñas (teléfonos) */
+    .main-container {
+        flex-direction: column; /* Apilar el logo y el texto en columna */
+        text-align: center; /* Centrar todo el contenido */
+    }
+
+    /* El logo ocupa un 50% en pantallas pequeñas */
+    .right-section {
+        flex: 50%;
+        margin-bottom: 20px;
+    }
+
+    /* El texto ocupa un 100% en pantallas pequeñas */
+    .left-section {
+        flex: 100%;
+    }
+
+    /* Ajuste del logo para pantallas pequeñas */
+    .logo2 {
+        width: 60%; /* Hacer el logo un poco más pequeño para que se vea mejor en pantallas pequeñas */
+    }
+}
